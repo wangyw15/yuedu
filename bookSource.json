@@ -53,66 +53,6 @@
     {
         "bookSourceComment": "By wangyw15",
         "bookSourceGroup": "⭕ 自用",
-        "bookSourceName": "哩哔轻小说",
-        "bookSourceType": 0,
-        "bookSourceUrl": "https://www.linovelib.com",
-        "bookUrlPattern": "",
-        "concurrentRate": "",
-        "customOrder": 0,
-        "enabled": true,
-        "enabledExplore": true,
-        "exploreUrl": "总点击榜::https://www.linovelib.com/top/allvisit/{{page}}.html\n月点击榜::https://www.linovelib.com/top/monthvisit/{{page}}.html\n总推荐榜::https://www.linovelib.com/top/allvote/{{page}}.html\n月推荐榜::https://www.linovelib.com/top/monthvote/{{page}}.html\n总鲜花榜::https://www.linovelib.com/top/allflower/{{page}}.html\n月鲜花榜::https://www.linovelib.com/top/monthflower/{{page}}.html\n最近更新::https://www.linovelib.com/top/lastupdate/{{page}}.html\n最新入库::https://www.linovelib.com/top/postdate/{{page}}.html\n最新上架::https://www.linovelib.com/top/signtime/{{page}}.html\n收藏榜::https://www.linovelib.com/top/goodnum/{{page}}.html\n字数榜::https://www.linovelib.com/top/words/{{page}}.html\n新书榜::https://www.linovelib.com/top/newhot/{{page}}.html",
-        "header": "",
-        "lastUpdateTime": 1637911186849,
-        "loginCheckJs": "",
-        "loginUi": "",
-        "loginUrl": "https://www.linovelib.com/login.php",
-        "respondTime": 180000,
-        "ruleBookInfo": {
-            "author": "class.au-name.0@text",
-            "coverUrl": "class.book-img.0@tag.img.0@src",
-            "intro": "class.book-dec.0@tag.p.0@all",
-            "kind": "class.book-label.0@tag.a@text",
-            "lastChapter": "class.book-new-chapter.0@class.tit.0@tag.a.0@text",
-            "name": "class.book-name.0@text",
-            "tocUrl": "class.read-btn.0@href",
-            "wordCount": "class.nums.0@tag.span.1@tag.i.0@text##\\s万##万字"
-        },
-        "ruleContent": {
-            "content": "id.TextContent@tag.p@text&&id.TextContent@class.imagecontent@src\n@js:\nvar content = result.split('\\n');\nfor (var i = 0; i < content.length; i++) {\n    if (content[i].startsWith('https://')) {\n        content[i] = '<img src=\"' + content[i] + '\">';\n    }\n}\ncontent.join('\\n')",
-            "nextContentUrl": "text.下一页.0@href"
-        },
-        "ruleExplore": {
-            "author": "class.rank_d_b_cate.0@tag.a.0@text",
-            "bookList": "class.rankpage_box.0@class.rank_d_list",
-            "bookUrl": "class.rank_d_b_name.0@tag.a.0@href",
-            "coverUrl": "class.rank_d_book_img.0@tag.img.0@data-original",
-            "intro": "class.rank_d_b_info.0@text",
-            "kind": "class.rank_d_b_cate.0@tag.a.!0@text",
-            "lastChapter": "class.rank_d_b_last.0@title",
-            "name": "class.rank_d_b_name.0@tag.a.0@text"
-        },
-        "ruleSearch": {
-            "author": "class.se-result-infos.0@class.bookinfo.0@tag.a.0@text",
-            "bookList": "class.search-tab.0@class.search-result-list",
-            "bookUrl": "class.se-result-infos.0@class.tit.0@tag.a.0@href",
-            "coverUrl": "class.se-result-book.0@tag.img.0@src",
-            "intro": "class.se-result-infos.0@tag.p.0@text",
-            "kind": "class.se-result-infos.0@class.bookinfo.0@tag.span.0@text&&class.se-result-infos.0@class.bookinfo.0@tag.a.1@text&&class.se-result-infos.0@class.key-word.0@text##\\s##,",
-            "name": "class.se-result-infos.0@class.tit.0@tag.a.0@text",
-            "wordCount": "class.se-result-infos.0@class.bookinfo.0@tag.span.1@tag.script.0@html##<\\S?script>|towan|\\(|\\)|'"
-        },
-        "ruleToc": {
-            "chapterList": "class.chapter-list.0@children\n@js:\nvar ret = new Array();\nvar currentVolume = '';\nfor (var i = 0; i < result.length; i++) {\n    var currentElement = result[i];\n    if (currentElement.tagName().toLowerCase() == 'div') {\n        currentVolume = currentElement.text();\n    }\n    else {\n        currentElement.children()[0].text(currentVolume + ' ' + currentElement.children()[0].text());\n        ret.push(currentElement);\n    }\n}\nret",
-            "chapterName": "tag.a.0@text",
-            "chapterUrl": "tag.a.0@href"
-        },
-        "searchUrl": "/sa/{{key}}_{{page}}.html",
-        "weight": 0
-    },
-    {
-        "bookSourceComment": "By wangyw15",
-        "bookSourceGroup": "⭕ 自用",
         "bookSourceName": "动漫之家",
         "bookSourceType": 0,
         "bookSourceUrl": "https://manhua.dmzj.com",
@@ -163,6 +103,66 @@
             "chapterUrl": "tag.a.0@href\n@js:\nvar headers = { \"Referer\": \"https://manhua.dmzj.com/\" };\nvar option = { \"headers\": headers, \"webView\": true };\nresult + ',' + JSON.stringify(option)"
         },
         "searchUrl": "https://manhua.dmzj.com/tags/search.shtml?s={{key}},{\"webView\": true}",
+        "weight": 0
+    },
+    {
+        "bookSourceComment": "By wangyw15",
+        "bookSourceGroup": "⭕ 自用",
+        "bookSourceName": "哩哔轻小说",
+        "bookSourceType": 0,
+        "bookSourceUrl": "https://www.linovelib.com",
+        "bookUrlPattern": "",
+        "concurrentRate": "",
+        "customOrder": 0,
+        "enabled": true,
+        "enabledExplore": true,
+        "exploreUrl": "总点击榜::https://www.linovelib.com/top/allvisit/{{page}}.html\n月点击榜::https://www.linovelib.com/top/monthvisit/{{page}}.html\n总推荐榜::https://www.linovelib.com/top/allvote/{{page}}.html\n月推荐榜::https://www.linovelib.com/top/monthvote/{{page}}.html\n总鲜花榜::https://www.linovelib.com/top/allflower/{{page}}.html\n月鲜花榜::https://www.linovelib.com/top/monthflower/{{page}}.html\n最近更新::https://www.linovelib.com/top/lastupdate/{{page}}.html\n最新入库::https://www.linovelib.com/top/postdate/{{page}}.html\n最新上架::https://www.linovelib.com/top/signtime/{{page}}.html\n收藏榜::https://www.linovelib.com/top/goodnum/{{page}}.html\n字数榜::https://www.linovelib.com/top/words/{{page}}.html\n新书榜::https://www.linovelib.com/top/newhot/{{page}}.html",
+        "header": "",
+        "lastUpdateTime": 1637912205154,
+        "loginCheckJs": "",
+        "loginUi": "",
+        "loginUrl": "https://www.linovelib.com/login.php",
+        "respondTime": 180000,
+        "ruleBookInfo": {
+            "author": "class.au-name.0@text",
+            "coverUrl": "class.book-img.0@tag.img.0@src",
+            "intro": "class.book-dec.0@tag.p.0@all",
+            "kind": "class.book-label.0@tag.a@text",
+            "lastChapter": "class.book-new-chapter.0@class.tit.0@tag.a.0@text",
+            "name": "class.book-name.0@text",
+            "tocUrl": "class.read-btn.0@href",
+            "wordCount": "class.nums.0@tag.span.1@tag.i.0@text##\\s万##万字"
+        },
+        "ruleContent": {
+            "content": "id.TextContent@tag.p@text&&id.TextContent@class.imagecontent@src\n@js:\nvar content = result.split('\\n');\nfor (var i = 0; i < content.length; i++) {\n    if (content[i].startsWith('https://')) {\n        content[i] = '<img src=\"' + content[i] + '\">';\n    }\n}\ncontent.join('\\n')",
+            "nextContentUrl": "class.mlfy_page.0@text.下一页.0@href"
+        },
+        "ruleExplore": {
+            "author": "class.rank_d_b_cate.0@tag.a.0@text",
+            "bookList": "class.rankpage_box.0@class.rank_d_list",
+            "bookUrl": "class.rank_d_b_name.0@tag.a.0@href",
+            "coverUrl": "class.rank_d_book_img.0@tag.img.0@data-original",
+            "intro": "class.rank_d_b_info.0@text",
+            "kind": "class.rank_d_b_cate.0@tag.a.!0@text",
+            "lastChapter": "class.rank_d_b_last.0@title",
+            "name": "class.rank_d_b_name.0@tag.a.0@text"
+        },
+        "ruleSearch": {
+            "author": "class.se-result-infos.0@class.bookinfo.0@tag.a.0@text",
+            "bookList": "class.search-tab.0@class.search-result-list",
+            "bookUrl": "class.se-result-infos.0@class.tit.0@tag.a.0@href",
+            "coverUrl": "class.se-result-book.0@tag.img.0@src",
+            "intro": "class.se-result-infos.0@tag.p.0@text",
+            "kind": "class.se-result-infos.0@class.bookinfo.0@tag.span.0@text&&class.se-result-infos.0@class.bookinfo.0@tag.a.1@text&&class.se-result-infos.0@class.key-word.0@text##\\s##,",
+            "name": "class.se-result-infos.0@class.tit.0@tag.a.0@text",
+            "wordCount": "class.se-result-infos.0@class.bookinfo.0@tag.span.1@tag.script.0@html##<\\S?script>|towan|\\(|\\)|'"
+        },
+        "ruleToc": {
+            "chapterList": "class.chapter-list.0@children\n@js:\nvar ret = new Array();\nvar currentVolume = '';\nfor (var i = 0; i < result.length; i++) {\n    var currentElement = result[i];\n    if (currentElement.tagName().toLowerCase() == 'div') {\n        currentVolume = currentElement.text();\n    }\n    else {\n        currentElement.children()[0].text(currentVolume + ' ' + currentElement.children()[0].text());\n        ret.push(currentElement);\n    }\n}\nret",
+            "chapterName": "tag.a.0@text",
+            "chapterUrl": "tag.a.0@href"
+        },
+        "searchUrl": "/sa/{{key}}_{{page}}.html",
         "weight": 0
     }
 ]
