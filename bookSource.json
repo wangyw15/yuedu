@@ -110,8 +110,8 @@
     "bookUrlPattern": "",
     "concurrentRate": "",
     "customOrder": 0,
-    "enabled": true,
-    "enabledExplore": true,
+    "enabled": false,
+    "enabledExplore": false,
     "exploreUrl": "总人气排行::https://manhua.dmzj.com/rank/{{page == 1 ? \"\" : \"total-block-\" + page + \".shtml\"}}\n本月人气排行::https://manhua.dmzj.com/rank/month-block-{{page}}.shtml\n本周人气排行::https://manhua.dmzj.com/rank/week-block-{{page}}.shtml\n今日人气排行::https://manhua.dmzj.com/rank/day-block-{{page}}.shtml\n订阅排行::https://manhua.dmzj.com/rank/subscribe/block-{{page}}.shtml",
     "header": "",
     "lastUpdateTime": 1650993294263,
@@ -171,7 +171,7 @@
     "enabledExplore": true,
     "exploreUrl": "总点击榜::https://www.linovelib.com/top/allvisit/{{page}}.html\n月点击榜::https://www.linovelib.com/top/monthvisit/{{page}}.html\n总推荐榜::https://www.linovelib.com/top/allvote/{{page}}.html\n月推荐榜::https://www.linovelib.com/top/monthvote/{{page}}.html\n总鲜花榜::https://www.linovelib.com/top/allflower/{{page}}.html\n月鲜花榜::https://www.linovelib.com/top/monthflower/{{page}}.html\n最近更新::https://www.linovelib.com/top/lastupdate/{{page}}.html\n最新入库::https://www.linovelib.com/top/postdate/{{page}}.html\n最新上架::https://www.linovelib.com/top/signtime/{{page}}.html\n收藏榜::https://www.linovelib.com/top/goodnum/{{page}}.html\n字数榜::https://www.linovelib.com/top/words/{{page}}.html\n新书榜::https://www.linovelib.com/top/newhot/{{page}}.html",
     "header": "",
-    "lastUpdateTime": 1651491079883,
+    "lastUpdateTime": 1651715666154,
     "loginCheckJs": "",
     "loginUi": "",
     "loginUrl": "https://www.linovelib.com/login.php",
@@ -188,7 +188,7 @@
     },
     "ruleContent": {
       "content": "@css:#TextContent>*@all\n@js:\nresult.split('\\n').map(para => para.trim()).join('\\n')",
-      "nextContentUrl": "class.mlfy_page.0@text.下一页.0@href",
+      "nextContentUrl": "//p[@class=\"mlfy_page\"]/a[contains(text(), \"下一页\")]/@href",
       "replaceRegex": "##embed[0-9]*_HD\\s?|\\s*style_\\S*\\(\\);\\s*"
     },
     "ruleExplore": {
@@ -218,6 +218,57 @@
       "isVolume": "isVolume"
     },
     "searchUrl": "/S0/,{\n\"method\": \"POST\",\n\"body\": \"searchkey={{key}}&searchtype=all\"\n}",
+    "weight": 0
+  },
+  {
+    "bookSourceComment": "By wangyw15",
+    "bookSourceGroup": "漫画,自用",
+    "bookSourceName": "动漫之家API",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://v3api.dmzj.com",
+    "bookUrlPattern": "",
+    "concurrentRate": "",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledExplore": true,
+    "exploreUrl": "",
+    "header": "",
+    "lastUpdateTime": 1651718695371,
+    "loginCheckJs": "",
+    "loginUi": "",
+    "loginUrl": "",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "$.data.info.authors",
+      "coverUrl": "$.data.info.cover",
+      "init": "",
+      "intro": "$.data.info.description",
+      "kind": "$.data.info.status&&$.data.info.types##/##,",
+      "lastChapter": "$.data.info.last_update_chapter_name",
+      "name": "$.data.info.title"
+    },
+    "ruleContent": {
+      "content": "$.page_url\n@js:\nresult.split('\\n').map(url => '<img src=\"' + url + '\">').join('\\n')"
+    },
+    "ruleExplore": {
+      "bookList": ""
+    },
+    "ruleSearch": {
+      "author": "$.authors",
+      "bookList": "$.*",
+      "bookUrl": "https://api.dmzj.com/dynamic/comicinfo/{{$.id}}.json",
+      "coverUrl": "$.cover",
+      "intro": "$.alias_name",
+      "kind": "$.types##/##,",
+      "lastChapter": "$.last_name",
+      "name": "$.title"
+    },
+    "ruleToc": {
+      "chapterList": "-$.data.list",
+      "chapterName": "$.chapter_name",
+      "chapterUrl": "https://m.dmzj.com/chapinfo/{{$.comic_id}}/{{$.id}}.html"
+    },
+    "searchUrl": "https://v3api.dmzj.com/search/show/0/{{key}}/{{page-1}}.json",
     "weight": 0
   }
 ]
