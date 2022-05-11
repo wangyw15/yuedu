@@ -216,7 +216,7 @@
     "weight": 0
   },
   {
-    "bookSourceComment": "By wangyw16",
+    "bookSourceComment": "By wangyw15",
     "bookSourceGroup": "自用,漫画,明日方舟",
     "bookSourceName": "泰拉记事社",
     "bookSourceType": 2,
@@ -228,17 +228,17 @@
     "enabledExplore": true,
     "exploreUrl": "泰拉记事社::/api/comic",
     "header": "",
-    "lastUpdateTime": 1652262858154,
+    "lastUpdateTime": 1652266472057,
     "loginCheckJs": "",
     "loginUi": "",
     "loginUrl": "",
     "respondTime": 180000,
     "ruleBookInfo": {
-      "author": "$.data.authors[*]",
+      "author": "$.data.authors",
       "coverUrl": "$.data.cover",
       "init": "",
       "intro": "$.data.subtitle&&.data.introduction\n@js:\nresult.split('\\n').map(line => line.trim()).join('\\n')",
-      "kind": "$.data.keywords[*]",
+      "kind": "$.data.keywords",
       "lastChapter": "$.data.episodes[0].shortTitle&&.data.episodes[0].title\n@js:\nresult.split('\\n').join(' ')",
       "name": "$.data.title"
     },
@@ -246,7 +246,7 @@
       "content": "$.data.pageInfos.length()\n@js:\nlet page_url = baseUrl + '/page?pageNum=';\nlet img_content = '<img src=\"{url}\">';\nlet ret = [];\njava.ajaxAll(Array.from({ length: parseInt(result) }, (v, i) => page_url + (i + 1))).forEach((resp, index, array) => {\n    let json = JSON.parse(resp.body());\n    ret[json.data.pageNum] = img_content.replace('{url}', json.data.url);\n});\nret.join('\\n')"
     },
     "ruleExplore": {
-      "author": "$.authors[*]",
+      "author": "$.authors",
       "bookList": "$.data",
       "bookUrl": "/api/comic/{{$.cid}}",
       "coverUrl": "$.cover",
@@ -254,14 +254,19 @@
       "name": "$.title"
     },
     "ruleSearch": {
-      "bookList": ""
+      "author": "$.authors",
+      "bookList": "$.data\n@js:\nlet key = java.get('searchKey');\nlet ret = [];\nresult.forEach((comic, index, array) => {\n    if (comic.title.indexOf(key) != -1) {\n        ret.push(comic);\n    }\n});\nret",
+      "bookUrl": "/api/comic/{{$.cid}}",
+      "coverUrl": "$.cover",
+      "intro": "$.subtitle",
+      "name": "$.title"
     },
     "ruleToc": {
       "chapterList": "-$.data.episodes",
       "chapterName": "$.shortTitle&&.title\n@js:\nresult.split('\\n').join(' ')",
       "chapterUrl": "{{baseUrl}}/episode/{{$.cid}}"
     },
-    "searchUrl": "",
+    "searchUrl": "/api/comic\n@js:\njava.put('searchKey', key);\nresult",
     "weight": 0
   },
   {
@@ -277,7 +282,7 @@
     "enabledExplore": true,
     "exploreUrl": "塞壬唱片::/api/albums",
     "header": "",
-    "lastUpdateTime": 1652263905519,
+    "lastUpdateTime": 1652266209727,
     "loginCheckJs": "",
     "loginUi": "",
     "loginUrl": "",
@@ -301,14 +306,18 @@
       "name": "$.name"
     },
     "ruleSearch": {
-      "bookList": ""
+      "author": "$.artistes",
+      "bookList": "$.data\n@js:\nlet key = java.get('searchKey');\nlet ret = [];\nresult.forEach((album, index, array) => {\n    if (album.name.indexOf(key) != -1) {\n        ret.push(album);\n    }\n});\nret",
+      "bookUrl": "/api/album/{{$.cid}}/detail",
+      "coverUrl": "$.coverUrl",
+      "name": "$.name"
     },
     "ruleToc": {
       "chapterList": "$.data.songs",
       "chapterName": "$.name",
       "chapterUrl": "/api/song/{{$.cid}}"
     },
-    "searchUrl": "",
+    "searchUrl": "/api/albums\n@js:\njava.put('searchKey', key);\nresult",
     "weight": 0
   },
   {
