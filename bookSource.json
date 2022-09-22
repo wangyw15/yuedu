@@ -8,9 +8,9 @@
     "bookUrlPattern": "",
     "concurrentRate": "",
     "customOrder": 0,
-    "enabled": true,
+    "enabled": false,
     "enabledCookieJar": false,
-    "enabledExplore": true,
+    "enabledExplore": false,
     "exploreUrl": "总点击榜::https://www.linovelib.com/top/allvisit/{{page}}.html\n月点击榜::https://www.linovelib.com/top/monthvisit/{{page}}.html\n总推荐榜::https://www.linovelib.com/top/allvote/{{page}}.html\n月推荐榜::https://www.linovelib.com/top/monthvote/{{page}}.html\n总鲜花榜::https://www.linovelib.com/top/allflower/{{page}}.html\n月鲜花榜::https://www.linovelib.com/top/monthflower/{{page}}.html\n最近更新::https://www.linovelib.com/top/lastupdate/{{page}}.html\n最新入库::https://www.linovelib.com/top/postdate/{{page}}.html\n最新上架::https://www.linovelib.com/top/signtime/{{page}}.html\n收藏榜::https://www.linovelib.com/top/goodnum/{{page}}.html\n字数榜::https://www.linovelib.com/top/words/{{page}}.html\n新书榜::https://www.linovelib.com/top/newhot/{{page}}.html",
     "header": "",
     "lastUpdateTime": 1652635461537,
@@ -77,7 +77,7 @@
     "enabledExplore": true,
     "exploreUrl": "总排行榜::/modules/article/toplist.php?sort=allvisit\n今日热榜::/modules/article/toplist.php?sort=dayvisit\n本月热点::/modules/article/toplist.php?sort=monthvisit\n最受关注::/modules/article/toplist.php?sort=goodnum\n已动画化::/modules/article/toplist.php?sort=anime\n最近更新::/modules/article/toplist.php?sort=lastupdate\n最新入库::/modules/article/toplist.php?sort=postdate",
     "header": "",
-    "lastUpdateTime": 1656000239847,
+    "lastUpdateTime": 1656001981663,
     "loginCheckJs": "",
     "loginUi": "",
     "loginUrl": "https://www.wenku8.net/login.php?jumpurl=http%3A%2F%2Fwww.wenku8.net%2Findex.php",
@@ -95,7 +95,7 @@
     },
     "ruleContent": {
       "content": "@css:#content@all",
-      "replaceRegex": "##本文来自\\s轻小说文库\\(http:\\/\\/www.wenku8.com\\)"
+      "replaceRegex": "##(本文来自)?(最新最全的日本动漫轻小说)?\\s轻小说文库[\\(（]https?:\\/\\/www.wenku8.com[\\)）](为你一网打尽[！!])?"
     },
     "ruleExplore": {
       "author": "@css:div:nth-child(2) p:nth-child(2)@text\n@js:\nresult.split('/')[0]",
@@ -186,51 +186,54 @@
     "bookSourceGroup": "自用,漫画",
     "bookSourceName": "拷贝漫画",
     "bookSourceType": 2,
-    "bookSourceUrl": "https://copymanga.net/",
+    "bookSourceUrl": "https://copymanga.site/",
     "bookUrlPattern": "",
     "concurrentRate": "",
     "customOrder": 2,
     "enabled": true,
     "enabledCookieJar": false,
     "enabledExplore": true,
+    "enabledReview": false,
     "exploreUrl": "推荐::https://api.copymanga.com/api/v3/recs?pos=3200102&limit=24&offset={{24*(page)}}\n日榜::https://api.copymanga.com/api/v3/ranks?type=1&date_type=day&_update=true&limit=24&offset={{24*(page-1)}}\n周榜::https://api.copymanga.com/api/v3/ranks?type=1&date_type=week&_update=true&limit=24&offset={{24*(page-1)}}\n月榜::https://api.copymanga.com/api/v3/ranks?type=1&date_type=month&_update=true&limit=24&offset={{24*(page-1)}}\n总榜::https://api.copymanga.com/api/v3/ranks?type=1&date_type=total&_update=true&limit=24&offset={{24*(page-1)}}\n最新::https://api.copymanga.com/api/v3/comics?free_type=1&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n熱門::https://api.copymanga.com/api/v3/comics?free_type=1&ordering=-popular&_update=true&limit=24&offset={{24*(page-1)}}\n愛情::https://api.copymanga.com/api/v3/comics?free_type=1&theme=aiqing&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n歡樂向::https://api.copymanga.com/api/v3/comics?free_type=1&theme=huanlexiang&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n冒险::https://api.copymanga.com/api/v3/comics?free_type=1&theme=maoxian&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n東方::https://api.copymanga.com/api/v3/comics?free_type=1&theme=dongfang&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n百合::https://api.copymanga.com/api/v3/comics?free_type=1&theme=baihe&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n校园::https://api.copymanga.com/api/v3/comics?free_type=1&theme=xiaoyuan&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n奇幻::https://api.copymanga.com/api/v3/comics?free_type=1&theme=qihuan&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n科幻::https://api.copymanga.com/api/v3/comics?free_type=1&theme=kehuan&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n生活::https://api.copymanga.com/api/v3/comics?free_type=1&theme=shenghuo&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n轻小说::https://api.copymanga.com/api/v3/comics?free_type=1&theme=qingxiaoshuo&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n格鬥::https://api.copymanga.com/api/v3/comics?free_type=1&theme=gedou&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n悬疑::https://api.copymanga.com/api/v3/comics?free_type=1&theme=xuanyi&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n神鬼::https://api.copymanga.com/api/v3/comics?free_type=1&theme=shengui&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n舰娘::https://api.copymanga.com/api/v3/comics?free_type=1&theme=jianniang&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n治愈::https://api.copymanga.com/api/v3/comics?free_type=1&theme=zhiyu&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n其他::https://api.copymanga.com/api/v3/comics?free_type=1&theme=qita&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n四格::https://api.copymanga.com/api/v3/comics?free_type=1&theme=sige&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n职场::https://api.copymanga.com/api/v3/comics?free_type=1&theme=zhichang&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n萌系::https://api.copymanga.com/api/v3/comics?free_type=1&theme=mengxi&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n耽美::https://api.copymanga.com/api/v3/comics?free_type=1&theme=danmei&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n伪娘::https://api.copymanga.com/api/v3/comics?free_type=1&theme=weiniang&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n竞技::https://api.copymanga.com/api/v3/comics?free_type=1&theme=jingji&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n搞笑::https://api.copymanga.com/api/v3/comics?free_type=1&theme=gaoxiao&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n性转换::https://api.copymanga.com/api/v3/comics?free_type=1&theme=xingzhuanhuan&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n节操::https://api.copymanga.com/api/v3/comics?free_type=1&theme=jiecao&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n侦探::https://api.copymanga.com/api/v3/comics?free_type=1&theme=zhentan&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n热血::https://api.copymanga.com/api/v3/comics?free_type=1&theme=rexue&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n美食::https://api.copymanga.com/api/v3/comics?free_type=1&theme=meishi&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n長條::https://api.copymanga.com/api/v3/comics?free_type=1&theme=changtiao&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n音乐舞蹈::https://api.copymanga.com/api/v3/comics?free_type=1&theme=yinyuewudao&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n後宮::https://api.copymanga.com/api/v3/comics?free_type=1&theme=hougong&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n彩色::https://api.copymanga.com/api/v3/comics?free_type=1&theme=COLOR&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n励志::https://api.copymanga.com/api/v3/comics?free_type=1&theme=lizhi&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n战争::https://api.copymanga.com/api/v3/comics?free_type=1&theme=zhanzheng&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n异世界::https://api.copymanga.com/api/v3/comics?free_type=1&theme=yishijie&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n机战::https://api.copymanga.com/api/v3/comics?free_type=1&theme=jizhan&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\nAA::https://api.copymanga.com/api/v3/comics?free_type=1&theme=aa&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n历史::https://api.copymanga.com/api/v3/comics?free_type=1&theme=lishi&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\nC96::https://api.copymanga.com/api/v3/comics?free_type=1&theme=comiket96&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\nC97::https://api.copymanga.com/api/v3/comics?free_type=1&theme=comiket97&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n宅系::https://api.copymanga.com/api/v3/comics?free_type=1&theme=zhaixi&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\nFATE::https://api.copymanga.com/api/v3/comics?free_type=1&theme=fate&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\nC95::https://api.copymanga.com/api/v3/comics?free_type=1&theme=comiket95&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n恐怖::https://api.copymanga.com/api/v3/comics?free_type=1&theme=%E6%81%90%E6%80%96&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n無修正::https://api.copymanga.com/api/v3/comics?free_type=1&theme=Uncensored&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\nC98::https://api.copymanga.com/api/v3/comics?free_type=1&theme=C98&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n武侠::https://api.copymanga.com/api/v3/comics?free_type=1&theme=wuxia&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n穿越::https://api.copymanga.com/api/v3/comics?free_type=1&theme=chuanyue&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\nLoveLive::https://api.copymanga.com/api/v3/comics?free_type=1&theme=loveLive&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n生存::https://api.copymanga.com/api/v3/comics?free_type=1&theme=shengcun&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n都市::https://api.copymanga.com/api/v3/comics?free_type=1&theme=dushi&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n转生::https://api.copymanga.com/api/v3/comics?free_type=1&theme=zhuansheng&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}\n仙侠::https://api.copymanga.com/api/v3/comics?free_type=1&theme=xianxia&ordering=-datetime_updated&_update=true&limit=24&offset={{24*(page-1)}}",
     "header": "",
-    "lastUpdateTime": 1652635445578,
+    "lastUpdateTime": 1663858528762,
     "loginCheckJs": "",
     "loginUi": "",
-    "loginUrl": "https://www.copymanga.net/web/login",
+    "loginUrl": "/web/login",
     "respondTime": 180000,
     "ruleBookInfo": {
-      "author": "$.results.comic.author[*].name##\\n##,",
-      "coverUrl": "$.results.comic.cover",
+      "author": "$.results.comic.author.*.name",
+      "coverUrl": "$.results.comic.cover\n@js:\nresult.match(/http\\S+\\/\\d+.jpg/)[0]",
       "init": "",
-      "intro": "$.results.comic.brief\n@js:\nresult.split('\\n').map(line => line.trim()).join('\\n')",
-      "kind": "$.results.comic.theme[*].name&&$.results.comic.status.display##\\n##,",
+      "intro": "$.results.comic.brief",
+      "kind": "$.results.comic.theme.*.name",
       "lastChapter": "$.results.comic.last_chapter.name",
       "name": "$.results.comic.name",
-      "tocUrl": "https://api.copymanga.net/api/v3/comic/{{$.results.comic.path_word}}/group/default/chapters?limit=100&offset=0"
+      "tocUrl": "/comic/{$.results.comic.path_word},{\"webView\":true}",
+      "wordCount": ""
     },
     "ruleContent": {
-      "content": "$.results.chapter.contents[*].url\n@js:\nresult.split('\\n').map(item => '<img src=\"'+item+'\">').join('')",
+      "content": "$.results.chapter.contents.*.url\n@js:\nresult.split('\\n').map(item => '<img src=\"'+item+'\">').join('')",
       "imageStyle": "FULL"
     },
     "ruleExplore": {
       "bookList": ""
     },
+    "ruleReview": {},
     "ruleSearch": {
       "author": "$.author[*].name##\\n##,",
       "bookList": "$.results.list.*",
-      "bookUrl": "https://api.copymanga.net/api/v3/comic2/{{$.path_word}}?platform=1",
-      "coverUrl": "$.cover",
+      "bookUrl": "/api/v3/comic2/{{$.path_word}}?platform=1",
+      "coverUrl": "$.cover\n@js:\nresult.match(/http\\S+\\/\\d+.jpg/)[0]",
       "name": "$.name"
     },
     "ruleToc": {
-      "chapterList": "$.results.list[*]",
-      "chapterName": "$.name",
-      "chapterUrl": "https://api.copymanga.net/api/v3/comic/{{$.comic_path_word}}/chapter/{{$.uuid}}?platform=1&_update=true",
+      "chapterList": "@css:#default全部>ul:nth-of-type(1)>a",
+      "chapterName": "@css:li@text",
+      "chapterUrl": "@href\n@js:\nlet pathname = result.match(/\\/comic\\/[^/]+/g)[0].substring(7);\nlet uuid = result.match(/\\/chapter\\/[^/]+/g)[0].substring(9);\n\"/api/v3/comic/\" + pathname + \"/chapter/\" + uuid + \"?platform=1&_update=true\"",
       "nextTocUrl": "@js:\npage=parseInt('{{$.results.total}}')/100;\npage=parseInt(page);\nlist=[];\nif(page){\nfor(i=1;i<=page;i++){\na=baseUrl.replace(/offset=\\d+/,'offset='+(page*100));\nlist.push(a)\n}\nlist\n}"
     },
-    "searchUrl": "https://api.copymanga.net/api/v3/search/comic?_update=true&format=json&limit=24&offset={{24*(page-1)}}&platform=1&q={{key}}",
+    "searchUrl": "/api/kb/web/searchs/comics?offset={{12*(page-1)}}&platform=2&limit=12&q={{key}}",
     "weight": 0
   },
   {
