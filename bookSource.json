@@ -127,6 +127,105 @@
     "weight": 0
   },
   {
+    "bookSourceComment": "",
+    "bookSourceGroup": "自用,小说",
+    "bookSourceName": "百合会-小说",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.yamibo.com/site/novel",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": true,
+    "enabledReview": false,
+    "exploreUrl": "最近更新::/novel/latest\n全部作品::/novel/list\n完结::/novel/list?q=finish\n签约::/novel/list?q=signed\n原创小说::/novel/list?q=1\n二次元同人::/novel/list?q=2\n三次元同人::/novel/list?q=3\n原创月榜::/ranking?cat=1\n二次元同人月榜::/ranking?cat=2\n三次元同人月榜::/ranking?cat=3",
+    "lastUpdateTime": 1665063031539,
+    "loginUrl": "https://www.yamibo.com/user/login",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "@css:h5@text",
+      "coverUrl": "@css:.container:nth-child(2) .panel-body:nth-child(1) .col-md-3>img@src",
+      "intro": "@css:.container:nth-child(2) #w0-collapse1@all&&.container:nth-child(2) #w1-collapse1@all",
+      "kind": "@css:.container:nth-child(2) .panel-body:nth-child(1) .col-md-9:nth-child(1)>p:nth-of-type(1)@text&&.container:nth-child(2) .panel-body:nth-child(1) .col-md-9:nth-child(1)>p:nth-of-type(2)@text&&.container:nth-child(2) .panel-body:nth-child(1) .col-md-9:nth-child(1)>p.col-md-12>a@text\n@js:\nfor (var i = 0; i < result.length; i++) {\n    result[i] = result[i].replace('作品状态：', '').replace('作品分类：', '').replace('，', '');\n}\nresult",
+      "lastChapter": "@css:#w2>div:last-child .list-view-inline>div:last-child>a@text",
+      "name": "@css:.container:nth-child(2) .panel-body:nth-child(1) .col-md-9:nth-child(2) h3@text\n@js:\nresult.trim()"
+    },
+    "ruleContent": {
+      "content": "@css:#w0-collapse1@all"
+    },
+    "ruleExplore": {
+      "author": "@css:td:nth-of-type(3)@text",
+      "bookList": "@css:#w0 tbody>tr",
+      "bookUrl": "@css:td:nth-of-type(2)>a@href",
+      "kind": "@css:td:nth-of-type(5)@text&&td:nth-of-type(4)@text##\\[|\\]",
+      "name": "@css:td:nth-of-type(2)@text"
+    },
+    "ruleSearch": {
+      "author": "@css:td:nth-of-type(3)@text",
+      "bookList": "@css:#w0 tbody>tr",
+      "bookUrl": "@css:td:nth-of-type(2)>a@href",
+      "kind": "@css:td:nth-of-type(5)@text&&td:nth-of-type(4)@text##\\[|\\]",
+      "name": "@css:td:nth-of-type(2)@text"
+    },
+    "ruleToc": {
+      "chapterList": "@css:#w2 .list-view-inline a||.container:nth-child(2)>div>div:nth-of-type(1)>div:nth-of-type(3)>.panel-body>div>div||.container:nth-child(2)>div>div:nth-of-type(1)>div:nth-of-type(4)>div.panel-body>div>div",
+      "chapterName": "@text",
+      "chapterUrl": "@href",
+      "isVolume": ""
+    },
+    "searchUrl": "/search/novel?SearchForm%5Bkeyword%5D={{key}}&page={{page}}",
+    "weight": 0
+  },
+  {
+    "bookSourceComment": "",
+    "bookSourceGroup": "自用,漫画",
+    "bookSourceName": "百合会-漫画",
+    "bookSourceType": 2,
+    "bookSourceUrl": "https://www.yamibo.com/site/manga",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": true,
+    "enabledReview": false,
+    "exploreUrl": "全部作品::/manga/list\n原创::/manga/list?q=4\n同人::/manga/list?q=6\n编辑推荐::/manga/rcmds?type=3012\n最近更新::/manga/latest\n原创推荐::/manga/rcmds?type=3014\n同人推荐::/manga/rcmds?type=3015\n漫画月榜::/manga/ranking?cat=4",
+    "lastUpdateTime": 1665064586095,
+    "loginUrl": "https://www.yamibo.com/user/login",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "@css:h5@text",
+      "coverUrl": "@css:.container:nth-child(2) .panel-body:nth-child(1) .col-md-3>img@src",
+      "intro": "@css:.container:nth-child(2) #w0-collapse1@all&&.container:nth-child(2) #w1-collapse1@all",
+      "kind": "@css:.container:nth-child(2) .panel-body:nth-child(1) .col-md-9:nth-child(1)>p:nth-of-type(1)@text&&.container:nth-child(2) .panel-body:nth-child(1) .col-md-9:nth-child(1)>p:nth-of-type(2)@text&&.container:nth-child(2) .panel-body:nth-child(1) .col-md-9:nth-child(1)>p.col-md-12>a@text\n@js:\nfor (var i = 0; i < result.length; i++) {\n    result[i] = result[i].replace('作品状态：', '').replace('作品分类：', '').replace('，', '');\n}\nresult",
+      "lastChapter": "@css:#w2>div:last-child .list-view-inline>div:last-child>a@text",
+      "name": "@css:.container:nth-child(2) .panel-body:nth-child(1) .col-md-9:nth-child(2) h3@text\n@js:\nresult.trim()"
+    },
+    "ruleContent": {
+      "content": "@css:div.container:nth-child(2)>section img@all",
+      "nextContentUrl": "@css:div.container:nth-child(2)>section>div:nth-of-type(3)>div:nth-child(2) li:nth-of-type(3)>a@href"
+    },
+    "ruleExplore": {
+      "author": "@css:td:nth-of-type(3)@text",
+      "bookList": "@css:#w0 tbody>tr",
+      "bookUrl": "@css:td:nth-of-type(2)>a@href",
+      "kind": "@css:td:nth-of-type(5)@text&&td:nth-of-type(4)@text##\\[|\\]",
+      "name": "@css:td:nth-of-type(2)@text"
+    },
+    "ruleSearch": {
+      "author": "@css:td:nth-of-type(3)@text",
+      "bookList": "@css:#w0 tbody>tr",
+      "bookUrl": "@css:td:nth-of-type(2)>a@href",
+      "kind": "@css:td:nth-of-type(5)@text&&td:nth-of-type(4)@text##\\[|\\]",
+      "name": "@css:td:nth-of-type(2)@text"
+    },
+    "ruleToc": {
+      "chapterList": "@css:.container:nth-child(2)>section>div>div:nth-of-type(1)>div:nth-of-type(4) .col-md-12>div a",
+      "chapterName": "@text",
+      "chapterUrl": "@href",
+      "isVolume": ""
+    },
+    "searchUrl": "/search/manga?SearchForm%5Bkeyword%5D={{key}}&page={{page}}",
+    "weight": 0
+  },
+  {
     "bookSourceComment": "By wangyw15",
     "bookSourceGroup": "自用,小说",
     "bookSourceName": "铅笔小说",
